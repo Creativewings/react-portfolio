@@ -3,7 +3,7 @@ export const profile = {
   title: 'Java Full Stack Developer',
   location: 'Kolkata, West Bengal, India',
   phone: '+91 9804174597',
-  email: 'ankurghosh13662forcognizant@gmail.com',
+  email: 'ankurghosh13662@gmail.com',
   summary:
     'Java Full Stack Developer with strong hands-on experience in designing, developing, and securing scalable backend services using Java 8+, Spring Boot, RESTful Architecture, and React. Proven ability to build reliable APIs, optimize application performance, and deliver client-focused solutions in Agile environments.',
   stats: [

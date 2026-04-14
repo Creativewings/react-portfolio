@@ -1,0 +1,44 @@
+.summaryBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 14px;
+  padding: 22px 24px;
+  color: #c0d4f0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #7baeff;
+  font-weight: 500;
+}
+
+.achievements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.achievCard {
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.achievCard:hover {
+  transform: translateY(-3px);
+}
+
+.achievVal {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.achievLbl {
+  font-size: 12px;
+  color: #4b6a9a;
+  margin-top: 4px;
+}

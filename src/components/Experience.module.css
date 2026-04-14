@@ -1,0 +1,119 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  border-radius: 14px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #1d4ed8;
+  border-radius: 3px 0 0 3px;
+  transition: background 0.2s;
+}
+
+.card:hover,
+.card.open {
+  border-color: rgba(59, 130, 246, 0.45);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.card:hover::before,
+.card.open::before {
+  background: #3b82f6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  padding-right: 20px;
+}
+
+.company {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e0eeff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.liveBadge {
+  font-size: 9px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 4px;
+  padding: 2px 7px;
+  letter-spacing: 1px;
+}
+
+.role {
+  font-size: 12px;
+  color: #3b82f6;
+  margin-top: 3px;
+}
+
+.period {
+  font-size: 11px;
+  color: #4b6a9a;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.details {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.bullets {
+  margin-top: 14px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.bullets li {
+  font-size: 13px;
+  color: #94afd4;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.arrow {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  color: #4b6a9a;
+  transition: transform 0.3s ease;
+}

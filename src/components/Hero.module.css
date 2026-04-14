@@ -1,0 +1,101 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 24px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a2a6c, #2563eb, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  animation: pulseRing 3s ease-in-out infinite;
+}
+
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); }
+  50%       { box-shadow: 0 0 0 16px rgba(37, 99, 235, 0); }
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  font-size: 13px;
+  color: #60a5fa;
+  margin-top: 6px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.loc {
+  font-size: 12px;
+  color: #4b6a9a;
+  margin-top: 6px;
+}
+
+.typerow {
+  margin-top: 14px;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.typed {
+  font-size: 13px;
+  color: #7baeff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: #3b82f6;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.statVal {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.statLbl {
+  font-size: 10px;
+  color: #4b6a9a;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 3px;
+}

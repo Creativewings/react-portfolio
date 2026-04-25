@@ -16,11 +16,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: #fff;
   margin-bottom: 18px;
   animation: pulseRing 3s ease-in-out infinite;
+  overflow: hidden; /* important */
+  cursor: pointer;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 @keyframes pulseRing {
@@ -98,4 +104,57 @@
   text-transform: uppercase;
   letter-spacing: 1.2px;
   margin-top: 3px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 👇 GLASS EFFECT */
+  background: rgba(10, 15, 30, 0.4);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+
+  z-index: 9999;
+}
+
+.modalImg {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 20px;
+
+  /* 👇 depth + glass edge */
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  animation: zoomIn 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.modalImg:hover {
+  transform: scale(1.02);
+}
+
+.modalImg::after {
+  content: '';
+  position: absolute;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

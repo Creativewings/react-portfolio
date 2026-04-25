@@ -33,13 +33,13 @@ export default function App() {
   const key = "visits";
 
   const url = hasVisited
-    ? `https://api.countapi.xyz/get/${namespace}/${key}`
-    : `https://api.countapi.xyz/hit/${namespace}/${key}`;
+  ? `https://api.counterapi.dev/v1/${namespace}/${key}`
+  : `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      setVisitors(data.value);
+      setVisitors(data.count);
       if (!hasVisited) {
         localStorage.setItem("visited", "true");
       }

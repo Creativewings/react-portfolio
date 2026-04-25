@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ParticleCanvas from './components/ParticleCanvas';
 import Hero from './components/Hero';
 import NavPills from './components/NavPills';
@@ -23,12 +23,38 @@ const SECTIONS = {
 
 export default function App() {
   const [active, setActive] = useState('About');
+  const [visitors, setVisitors] = useState(null);
+
+
+  useEffect(() => {
+  const hasVisited = localStorage.getItem("visited");
+
+  const namespace = "react-portfolio-xi-rust-vercel";
+  const key = "visits";
+
+  const url = hasVisited
+    ? `https://api.countapi.xyz/get/${namespace}/${key}`
+    : `https://api.countapi.xyz/hit/${namespace}/${key}`;
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      setVisitors(data.value);
+      if (!hasVisited) {
+        localStorage.setItem("visited", "true");
+      }
+    })
+    .catch(() => setVisitors("—"));
+}, []);
 
   return (
     <div style={{ minHeight: '100vh', background: '#05070f', position: 'relative' }}>
       <ParticleCanvas />
       <div style={{ position: 'relative', zIndex: 2 }}>
         <Hero />
+        <div className="visitorBox">
+          {visitors ?? "…"} people explored this portfolio
+       </div>
         <NavPills active={active} onSelect={setActive} />
         <div key={active}>
           {SECTIONS[active]}

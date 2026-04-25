@@ -69,7 +69,75 @@ export const experiences = [
     ],
   },
 ];
-
+export const projects = [
+  {
+    name: 'Admin Dashboard & KPI Analytics',
+    featured: true,
+    tech: ['Spring Boot', 'ReactJS', 'Spring Security', 'REST API', 'Oracle'],
+    color: '#3b82f6',
+    bg: 'rgba(59,130,246,0.12)',
+    border: 'rgba(59,130,246,0.2)',
+    description:
+      'A full-stack admin portal with role-based access control and real-time KPI dashboards for business intelligence reporting.',
+    bullets: [
+      'Built secure REST APIs with Spring Security — JWT + role-based access',
+      'Interactive KPI graphs using Chart.js integrated in a React SPA',
+      'Reduced report generation time by 50% through SQL optimisation',
+      'Agile delivery across 4 sprints in close collaboration with client',
+    ],
+    link: '', // add GitHub/live URL if available
+  },
+  {
+    name: 'AI-Powered HR Management System',
+    featured: true,
+    tech: ['Spring Boot', 'Gemini API','Java 21', 'PostgreSQL'],
+    color: '#a78bfa',
+    bg: 'rgba(167,139,250,0.12)',
+    border: 'rgba(167,139,250,0.2)',
+    description:
+      'Integrated Gemini API into a Spring Boot service for automated data extraction and validation in HR management workflows, improving efficiency and decision-making.',
+    bullets: [
+      'Spring Boot service for HR data processing with Gemini API integration',
+      'Automated extraction of applicant data from resumes and forms',
+      'Data validation and enrichment using AI insights',
+      'Improved HR processing efficiency by 30% and decision-making with AI-driven insights',
+    ],
+    link: '',
+  },
+  {
+    name: 'Notice & Notification Module',
+    featured: false,
+    tech: ['ReactJS', 'Spring Boot','REST API'],
+    color: '#34d399',
+    bg: 'rgba(52,211,153,0.12)',
+    border: 'rgba(52,211,153,0.2)',
+    description:
+      'Real-time notice board and notification module integrated into the Admin Portal.',
+    bullets: [
+      'Live in-app notifications',
+      'Role-filtered notices — different content per user group',
+      'Improved user interaction metrics by 60% after rollout',
+    ],
+    link: '',
+  },
+  {
+    name: 'Caster Level 2 Automation Suite',
+    featured: false,
+    tech: ['Java', 'Spring', 'Oracle','Tibco Jaspersoft'],
+    color: '#f59e0b',
+    bg: 'rgba(245,158,11,0.12)',
+    border: 'rgba(245,158,11,0.2)',
+    description:
+      'Enterprise-grade data exchange and reporting suite for Caster Level 2 automation at Primetals Technologies.',
+    bullets: [
+      'Modelled complex JPA entities for caster machine data',
+      'Jasper Reports integration for regulatory & operations reporting',
+      'Optimised Oracle SQL queries — 40% DB performance improvement',
+      'Resolved critical production issues, cutting downtime by 30%',
+    ],
+    link: '',
+  },
+];
 export const skillGroups = [
   {
     label: 'Frameworks',

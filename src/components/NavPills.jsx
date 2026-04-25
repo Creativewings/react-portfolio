@@ -1,6 +1,6 @@
 import styles from './NavPills.module.css';
 
-const TABS = ['About', 'Experience', 'Skills', 'Education', 'Journey', 'Contact'];
+const TABS = ['About', 'Experience', 'Projects', 'Skills', 'Education', 'Journey', 'Contact'];
 
 export default function NavPills({ active, onSelect }) {
   return (

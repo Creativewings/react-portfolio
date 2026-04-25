@@ -8,11 +8,13 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
 import './index.css';
 
 const SECTIONS = {
   About: <About />,
   Experience: <Experience />,
+  Projects: <Projects />,
   Skills: <Skills />,
   Education: <Education />,
   Journey: <Timeline />,

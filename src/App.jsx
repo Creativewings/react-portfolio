@@ -53,7 +53,7 @@ export default function App() {
       <div style={{ position: 'relative', zIndex: 2 }}>
         <Hero />
         <div className="visitorBox">
-          {visitors ?? "…"} people explored this portfolio
+          {/* {visitors ?? "…"} people explored this portfolio */}
        </div>
         <NavPills active={active} onSelect={setActive} />
         <div key={active}>
